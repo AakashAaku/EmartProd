@@ -1,4 +1,5 @@
 using System.Reflection;
+using EmartProd.Application;
 using EmartProd.Application.Interfaces;
 using EmartProd.Infrastructure.EmartContext;
 using EmartProd.Infrastructure.Repositories;
@@ -18,7 +19,8 @@ builder.Services.AddDbContext<EmartProdContext>(opt=>{
 });
 
 builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+//builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+IApplicationConfiguration.RegisterApplicationConfig(builder.Services);
 
 var app = builder.Build();
 
@@ -29,8 +31,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
+app.UseStaticFiles();
 app.UseAuthorization();
 
 app.MapControllers();

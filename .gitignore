@@ -485,3 +485,5 @@ $RECYCLE.BIN/
 Presentation/EmartProd.API/Properties/launchSettings.json
 Presentation/EmartProd.API/appsettings.Development.json
 Presentation/EmartProd.API/appsettings.json
+Presentation/EmartProd.API/EmartProdDb.db-shm
+Presentation/EmartProd.API/EmartProdDb.db-wal

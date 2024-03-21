@@ -39,7 +39,9 @@ namespace EmartProd.API.Controllers
         public async Task<ActionResult<ProductResponseDTO>> GetProduct(int id)
         {
             var spec = new ProductWithBrandAndTypes(id);
-            return Ok(await _productRepo.GetEntityWithSpec(spec));
+            var prodduct = await _productRepo.GetEntityWithSpec(spec);
+            var productRes = _mapper.Map<Products,ProductResponseDTO>(prodduct);
+            return Ok(productRes);
         }
 
         [HttpGet("brands")]
