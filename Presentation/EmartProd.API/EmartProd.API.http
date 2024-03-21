@@ -1,0 +1,6 @@
+@EmartProd.API_HostAddress = http://localhost:5038
+
+GET {{EmartProd.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{85AC8CF9-2959-4683-B257-AB24A8CD0CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmartProd.API", "Presentation\EmartProd.API\EmartProd.API.csproj", "{F5E004C9-C27B-46E2-9F69-556FACD8DF0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B38644D5-5C22-46BC-9849-061E1565A112}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmartProd.Application", "Core\EmartProd.Application\EmartProd.Application.csproj", "{C8D0E260-FAB5-4A10-99E3-999AC756597E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmartProd.Domain", "Core\EmartProd.Domain\EmartProd.Domain.csproj", "{63B63FD6-66C4-4901-B99E-7780E05199EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{45A8E7E1-6D39-4240-A0AA-B6D9C8ECAACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmartProd.Infrastructure", "Infrastructure\EmartProd.Infrastructure\EmartProd.Infrastructure.csproj", "{6E95E341-8777-4689-9D70-4E8DFE842793}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5E004C9-C27B-46E2-9F69-556FACD8DF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E004C9-C27B-46E2-9F69-556FACD8DF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E004C9-C27B-46E2-9F69-556FACD8DF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E004C9-C27B-46E2-9F69-556FACD8DF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D0E260-FAB5-4A10-99E3-999AC756597E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D0E260-FAB5-4A10-99E3-999AC756597E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D0E260-FAB5-4A10-99E3-999AC756597E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D0E260-FAB5-4A10-99E3-999AC756597E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B63FD6-66C4-4901-B99E-7780E05199EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B63FD6-66C4-4901-B99E-7780E05199EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B63FD6-66C4-4901-B99E-7780E05199EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B63FD6-66C4-4901-B99E-7780E05199EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E95E341-8777-4689-9D70-4E8DFE842793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E95E341-8777-4689-9D70-4E8DFE842793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E95E341-8777-4689-9D70-4E8DFE842793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E95E341-8777-4689-9D70-4E8DFE842793}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5E004C9-C27B-46E2-9F69-556FACD8DF0C} = {85AC8CF9-2959-4683-B257-AB24A8CD0CDE}
+		{C8D0E260-FAB5-4A10-99E3-999AC756597E} = {B38644D5-5C22-46BC-9849-061E1565A112}
+		{63B63FD6-66C4-4901-B99E-7780E05199EC} = {B38644D5-5C22-46BC-9849-061E1565A112}
+		{6E95E341-8777-4689-9D70-4E8DFE842793} = {45A8E7E1-6D39-4240-A0AA-B6D9C8ECAACF}
+	EndGlobalSection
+EndGlobal
