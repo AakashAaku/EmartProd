@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace EmartProd.API.Controllers;
 
 [ApiController]
+[ApiExplorerSettings(IgnoreApi =true)]
 [Route("[controller]")]
+
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]

@@ -1,35 +1,29 @@
-using System.Reflection;
-using EmartProd.Application;
-using EmartProd.Application.Interfaces;
+using EmartProd.API.Middleware;
 using EmartProd.Infrastructure.EmartContext;
-using EmartProd.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using EmartProd.API.Extension;
+using EmartProd.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.RegisterApplicationConfig();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<EmartProdContext>(opt=>{
-    opt.UseSqlite(builder.Configuration.GetConnectionString("EmartProdConnection"));
-});
-
-builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
-//builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-IApplicationConfiguration.RegisterApplicationConfig(builder.Services);
-
+builder.Services.AddApplicationExtension(builder.Configuration);
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionMiddleware>();
+
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseStatusCodePagesWithReExecute("/error/{0}");
+
+// if (app.Environment.IsDevelopment())
+// {
+app.UseSwagger();
+app.UseSwaggerUI();
+// }
 
 //app.UseHttpsRedirection();
 
